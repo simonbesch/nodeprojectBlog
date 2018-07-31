@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1.titlee.padding.header Nouvelle Histoire
+  p.padding Ecrivez votre article :
+  form(method='post', action='/stories/creatblog')
+    .form-group
+    div.form
+      label.padding Nom de l'ouvrage : 
+      input(name='name', type='text', placeholder='Nom', required=true)
+      label.padding Votre Histoire : 
+      div.texte
+        textarea(name="ouvrage" rows="10" cols="80" placeholder="50 caractères minimums" spellcheck=true, maxlength=10000,
+        minlength=50 required=true).textarea
+      label.padding Genre de l'Histoire (Fantastique, horreur, rommantique, etc...) : 
+      input(name='type', type='text', placeholder='Type', required=true)   
+    div.button
+     button(type='submit', name='submit') Post

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1.titlee.padding.header Register
+  p.padding Enregistrez-vous : 
+  form(method='post', action='/users/register')
+    .form-group
+    div.form
+      label.padding Email (votre email sera invisible au yeux des lecteurs)
+      input(name='email', type='email', placeholder='Email', required=true)
+      label.padding Username:
+      input(name='username', type='text', placeholder='Username', required=true)
+      label.padding password :
+      input(name='password', type='password', placeholder='password', required=true)   
+    div.button
+     button(type='submit', name='submit') enregister

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1.titlee.padding.header Histoires :
+  p.padding Toutes les Histoires ici :
+  div.history
+    textarea(name="ouvrage" rows="30" cols="100" placeholder="" spellcheck=true, maxlength=10000,
+    minlength=50 required=true readonly)=story.ouvrage
+  div.modif
+    if locals.user
+      a(href='/delete/'+story._id) 
+        button(name="modif") supprimer l'histoire.
+      
